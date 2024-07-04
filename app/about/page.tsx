@@ -56,7 +56,7 @@ const About = (props: Props) => {
       </div>
 
       <aside className="ascii-container flex justify-center my-8">
-        <pre className="asciiart font-mono whitespace-pre text-[0.2em] sm:text-[0.33em] md:text-[0.5em] lg:text-[1em] text-[#454545]">
+        <pre className="asciiart font-mono whitespace-pre text-[0.2em] sm:text-[0.33em] md:text-[0.5em] lg:text-[1em] text-454545">
           {`
                  uuuuuuu
              uu$$$$$$$$$$$uu
