@@ -1,9 +1,14 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type Props = {};
 
 const Header = (props: Props) => {
+  const pathname = usePathname();
+
   return (
     <div className="topbar flex flex-row justify-center w-full py-3 px-4 sm:justify-between">
       <h1 className="hidden">AndaPirate</h1>
@@ -18,8 +23,10 @@ const Header = (props: Props) => {
             <span className="hidden sm:block">&gt;</span>
             <span>
               &nbsp;
-              <Link href="/services" className="selected">
-                Services
+              <Link href="/services">
+                <span className={pathname === "/services" ? "underline" : ""}>
+                  Services
+                </span>
               </Link>
             </span>
           </li>
@@ -27,14 +34,22 @@ const Header = (props: Props) => {
             <span className="hidden sm:block">&gt;</span>
             <span>
               &nbsp;
-              <Link href="/about">À propos</Link>
+              <Link href="/about">
+                <span className={pathname === "/about" ? "underline" : ""}>
+                  À propos
+                </span>
+              </Link>
             </span>
           </li>
           <li className="ml-2 flex flex-row">
             <span className="hidden sm:block">&gt;</span>
             <span>
               &nbsp;
-              <Link href="/credits">Crédits</Link>
+              <Link href="/credits">
+                <span className={pathname === "/credits" ? "underline" : ""}>
+                  Crédits
+                </span>
+              </Link>
             </span>
           </li>
         </ul>
